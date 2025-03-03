@@ -1,0 +1,14 @@
+
+rule get_data:
+  output:
+    'SnakeSizes.csv'
+  script:
+    'Make-Data.R'
+    
+rule make_plot:
+  input:
+    'SnakeSizes.csv'
+  output:
+    'SnakeSize.png'
+  script:
+    'Make-Graph.R'
