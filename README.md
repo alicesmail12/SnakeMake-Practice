@@ -32,9 +32,9 @@ rule rule1:
   script:
     'R/Do-Something.R'
 ```
-Then inside the R file, use:
+Then inside the R file the input and output wildcards can be accessed from snakemake.
 ```
 paste(snakemake@input)
 paste(snakemake@output)
 ```
-to access the input and output wildcards.
+
