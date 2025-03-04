@@ -12,9 +12,9 @@ The `Snakefile` contains four rules:
 - `make_boxplot` and `make_barplot` which generate the plots in `/Plots` using `R/Make-BoxPlot.R` and `R/Make-BarPlot.R`
 - the `all` rule defines the target output files of the snakemake workflow
 
-***Snakemake.out***
+***Log File***
 
-Output file from running this workflow on a HPC using slurm.
+`Snakemake.out` is the output file from running this workflow on a HPC using slurm.
 
 ***DAG***
 
