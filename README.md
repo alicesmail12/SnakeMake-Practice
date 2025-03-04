@@ -16,7 +16,7 @@ The `Snakefile` contains four rules:
 
 Output file from running this workflow on a HPC using slurm.
 
-### Using Wildcards in R via Snakemake
+## Using Wildcards in R via Snakemake
 
 In the Snakefile use:
 ```
