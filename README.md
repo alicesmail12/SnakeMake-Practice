@@ -1,5 +1,5 @@
 # Snakemake
-Snakemake is a management system that helps develop reproducible workflows. Input files may be run through bash commands, Python code or external Python/R scripts - Snakemake helps bring all of this together in a single file that schedules each step of the workflow; as well as improving workflow management, this also aids parallelisation. [Refernce](https://f1000research.com/articles/10-33/v2)
+[Snakemake](https://f1000research.com/articles/10-33/v2) is a management system that helps develop reproducible workflows. Input files may be run through bash commands, Python code or external Python/R scripts - Snakemake helps bring all of this together in a single file that schedules each step of the workflow; as well as improving workflow management, this also aids parallelisation. 
 
 # Using Wildcards in R via Snakemake
 
