@@ -1,14 +1,28 @@
+ANIMALS = ['Snake', 'Lizard']
 
+rule all:
+    input:
+        expand('{animal}SizeBar.png', animal=ANIMALS), expand('{animal}SizeBox.png', animal=ANIMALS)
+          
 rule get_data:
   output:
-    'SnakeSizes.csv'
+    '{animal}Sizes.csv'
   script:
     'Make-Data.R'
     
-rule make_plot:
+rule make_boxplot:
   input:
-    'SnakeSizes.csv'
+    '{animal}Sizes.csv'
   output:
-    'SnakeSize.png'
+    '{animal}SizeBox.png'
   script:
-    'Make-Graph.R'
+    'Make-BoxPlot.R'
+    
+rule make_barplot:
+  input:
+    '{animal}Sizes.csv'
+  output:
+    '{animal}SizeBar.png'
+  script:
+    'Make-BarPlot.R'
+    
