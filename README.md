@@ -22,12 +22,16 @@ In the Snakefile use:
 ```
 rule all:
     input:
-        expand({wildcard}.out, wildcard=['File1', 'File2', 'File3'])
+        expand('Data/{wildcard}.out', wildcard=['File1', 'File2', 'File3'])
 ```
-to get the final target output files (File1.out, File2.out and File3.out here).
-
-
-
+to get the final target output files (File1.out, File2.out and File3.out here). In each rule use the wildcards but without `expand()`:
+```
+rule rule1:
+  output:
+    'Data/{wildcard}.out'
+  script:
+    'R/Do-Something.R'
+```
 Then inside the R file, use:
 ```
 paste(snakemake@input)
