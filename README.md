@@ -29,10 +29,10 @@ rule all:
         expand('Data/{wildcard}.out', wildcard=['File1', 'File2', 'File3'])
 
 rule rule1:
-  output:
-    'Data/{wildcard}.out'
-  script:
-    'R/Do-Something.R'
+    output:
+        'Data/{wildcard}.out'
+    script:
+        'R/Do-Something.R'
 ```
 Inside the R file the input and output files using wildcards can be accessed from `snakemake`.
 ```
