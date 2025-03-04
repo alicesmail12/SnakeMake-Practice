@@ -3,7 +3,7 @@ Very simple workflow to practice using Snakemake on a HPC. Involves the generati
 
 ***RunSnakemake Bash File***
 
-Loads snakemake and runs the Snakefile on a slurm based HPC.
+Loads snakemake and runs the `Snakefile` on a slurm based HPC.
 
 ***Snakefile***
 
