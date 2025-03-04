@@ -16,6 +16,9 @@ The `Snakefile` contains four rules:
 
 Output file from running this workflow on a HPC using slurm.
 
+***DAG***
+`Plots/dag.svg` is a visualisation of the DAG from this workflow.
+
 ## Using Wildcards in R via Snakemake
 
 In the Snakefile define an `all` rule to get the final target output files (File1.out, File2.out and File3.out here), and in subsequent rules use the wildcards but without `expand()`.
