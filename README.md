@@ -21,7 +21,7 @@ Output file from running this workflow on a HPC using slurm.
 In the Snakefile use:
 ```
 expand({wildcard}.out, wildcard=['File1', 'File2', 'File3'])
-*File1.out File2.out File3.out*
+#File1.out File2.out File3.out
 ```
 to get the final target output files
 
