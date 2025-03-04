@@ -20,10 +20,13 @@ Output file from running this workflow on a HPC using slurm.
 
 In the Snakefile use:
 ```
-expand({wildcard}.out, wildcard=['File1', 'File2', 'File3'])
-#File1.out File2.out File3.out
+rule all:
+    input:
+        expand({wildcard}.out, wildcard=['File1', 'File2', 'File3'])
 ```
-to get the final target output files
+to get the final target output files (File1.out, File2.out and File3.out here).
+
+
 
 Then inside the R file, use:
 ```
