@@ -18,14 +18,12 @@ Output file from running this workflow on a HPC using slurm.
 
 ## Using Wildcards in R via Snakemake
 
-In the Snakefile use:
+In the Snakefile define an `all` rule to get the final target output files (File1.out, File2.out and File3.out here), and in subsequent rules use the wildcards but without `expand()`.
 ```
 rule all:
     input:
         expand('Data/{wildcard}.out', wildcard=['File1', 'File2', 'File3'])
-```
-to get the final target output files (File1.out, File2.out and File3.out here). In each rule use the wildcards but without `expand()`:
-```
+
 rule rule1:
   output:
     'Data/{wildcard}.out'
