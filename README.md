@@ -30,7 +30,7 @@ rule rule1:
   script:
     'R/Do-Something.R'
 ```
-Inside the R file the input and output files using wildcards can be accessed from snakemake.
+Inside the R file the input and output files using wildcards can be accessed from `snakemake`.
 ```
 paste(snakemake@input)
 paste(snakemake@output)
