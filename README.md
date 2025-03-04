@@ -15,3 +15,19 @@ The `Snakefile` contains four rules:
 ***Snakemake.out***
 
 Output file from running this workflow on a HPC using slurm.
+
+### Using Wildcards in R via Snakemake
+
+In the Snakefile use:
+```
+expand({wildcard}.out, wildcard=['File1', 'File2', 'File3'])
+*File1.out File2.out File3.out*
+```
+to get the final target output files
+
+Then inside the R file, use:
+```
+paste(snakemake@input)
+paste(snakemake@output)
+```
+to access the input and output wildcards.
